@@ -1,0 +1,24 @@
+{
+    "name": "augwa/kraken-api",
+    "type": "library",
+    "keywords": ["kraken"],
+    "homepage": "https://github.com/augwa/kraken-api-php",
+    "description": "API Interface for Kraken.com Bitcoin Exchange",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Dahan",
+            "email": "jonathan@augwa.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Augwa\\Kraken\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
