@@ -648,10 +648,12 @@ class KrakenAPI
             if ($startTime->getTimestamp() < time()) {
                 throw new \Exception('Start time must be a future date');
             }
-            $params['starttm'] = sprintf(
-                '+%d',
-                $startTime->getTimestamp() - time()
-            );
+// this might be bugged, need to investigate
+//            $params['starttm'] = sprintf(
+//                '+%d',
+//                $startTime->getTimestamp() - time()
+//            );
+            $params['starttm'] = $startTime->getTimestamp();
         }
 
         /**
@@ -661,10 +663,12 @@ class KrakenAPI
             if ($expireTime->getTimestamp() < time()) {
                 throw new \Exception('Expire time must be a future date');
             }
-            $params['expiretm'] = sprintf(
-                '+%d',
-                $expireTime->getTimestamp() - time()
-            );
+// this might be bugged, need to investigate
+//            $params['expiretm'] = sprintf(
+//                '+%d',
+//                $expireTime->getTimestamp() - time()
+//            );
+            $params['expiretm'] = $expireTime->getTimestamp();
         }
 
         /**
